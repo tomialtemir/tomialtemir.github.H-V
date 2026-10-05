@@ -1,0 +1,107 @@
+/* COLORES: podés cambiar la paleta desde estas variables. */
+:root {
+  --azul: #0757bf;
+  --azul-oscuro: #10335c;
+  --amarillo: #ffda55;
+  --texto: #24354b;
+  --secundario: #617085;
+  --borde: #dfe6ee;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--texto); background: #fff; line-height: 1.6; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+.contenedor { width: min(1180px, calc(100% - 64px)); margin-inline: auto; }
+.saltar { position: absolute; left: 16px; top: -100px; z-index: 5; background: white; padding: 12px; }
+.saltar:focus { top: 10px; }
+a:focus-visible { outline: 3px solid #e8a900; outline-offset: 5px; }
+.encabezado-interior { min-height: 150px; display: flex; align-items: center; justify-content: space-between; gap: 36px; padding-block: 28px; }
+.marca { display: flex; align-items: center; gap: 18px; text-decoration: none; flex-shrink: 0; }
+.logo-provisorio { display: grid; place-content: center; width: 70px; height: 70px; background: #edf4ff; border: 1px dashed #82a6d7; color: var(--azul); font-size: 17px; font-weight: 700; line-height: 1.15; text-align: center; }
+.logo { width: 90px; max-height: 90px; object-fit: contain; }
+.marca-texto { display: flex; flex-direction: column; }
+.marca-texto strong { font-size: 25px; font-weight: 500; letter-spacing: 1.5px; }
+.marca-texto > span { color: var(--secundario); font-size: 13px; }
+.datos-encabezado { display: flex; gap: 35px; }
+.dato { display: flex; gap: 12px; align-items: flex-start; }
+.icono { width: 25px; height: 25px; flex-shrink: 0; color: var(--azul); margin-top: 5px; }
+.etiqueta { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--secundario); }
+.dato p { margin: 6px 0 0; font-size: 13px; }
+.dato p span { color: var(--secundario); }
+.navegacion { background: var(--azul); color: #fff; }
+.enlaces { display: flex; gap: 8px; }
+.enlaces a { padding: 20px 27px; text-decoration: none; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; font-size: 12px; border-bottom: 3px solid transparent; }
+.enlaces a:first-child { border-bottom-color: var(--amarillo); }
+.enlaces a:hover { background: #ffffff15; border-bottom-color: var(--amarillo); }
+
+/* IMAGEN PRINCIPAL:
+   1. Creá una carpeta "imagenes" junto al HTML y al CSS.
+   2. Guardá tu foto como "principal.jpg" dentro de esa carpeta.
+   3. Reemplazá "background-image: none;" por:
+      background-image: linear-gradient(90deg, rgba(10,35,66,.15), rgba(10,35,66,.82)), url("imagenes/principal.jpg");
+   4. Cambiá display: flex por display: none en .espacio-imagen.
+*/
+.portada {
+  background-color: #143e6b;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(10, 35, 66, 0.15),
+      rgba(10, 35, 66, 0.82)
+    ),
+    url("./imagenes/principal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.portada-interior { min-height: 510px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 75px; padding-block: 65px; }
+.espacio-imagen { display: none; }
+.espacio-imagen svg { width: 60px; height: 60px; }
+.presentacion { grid-column: 2; }
+.sobretitulo { color: #c5d9ee; letter-spacing: 3px; font-size: 11px; font-weight: 700; }
+h1 { margin: 18px 0; font-size: clamp(36px, 4.4vw, 60px); line-height: 1.08; letter-spacing: -1.7px; font-weight: 700; }
+h1 span { display: block; color: var(--amarillo); }
+.presentacion > p:not(.sobretitulo) { color: #d2dfed; font-size: 16px; max-width: 440px; margin-bottom: 28px; }
+.boton { display: inline-flex; align-items: center; gap: 30px; padding: 13px 23px; background: var(--amarillo); color: #173452; font-weight: 700; font-size: 13px; text-decoration: none; }
+.boton:hover { background: #ffe78f; }
+.boton span { font-size: 22px; line-height: 1; }
+.informacion { display: grid; grid-template-columns: 1fr 1fr; padding-block: 55px; gap: 45px; }
+.bloque { display: flex; gap: 24px; min-width: 0; }
+.bloque + .bloque { border-left: 1px solid var(--borde); padding-left: 45px; }
+.numero { color: var(--azul); font-size: 12px; font-weight: 700; padding-top: 8px; }
+h2 { margin: 0 0 12px; font-size: 23px; font-weight: 500; }
+.bloque p { color: var(--secundario); font-size: 14px; margin: 4px 0; overflow-wrap: anywhere; }
+address { font-style: normal; }
+address strong { color: var(--texto); font-weight: 500; }
+footer { border-top: 1px solid var(--borde); padding: 23px 0; font-size: 11px; letter-spacing: 1px; }
+footer span { color: var(--secundario); letter-spacing: 0; }
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .encabezado-interior { flex-wrap: wrap; gap: 25px; }
+  .datos-encabezado { flex-wrap: wrap; gap: 25px; }
+  .portada-interior { gap: 35px; }
+  .marca-texto strong { font-size: 23px; }
+}
+/* CELULAR */
+@media (max-width: 640px) {
+  .contenedor { width: calc(100% - 36px); }
+  .encabezado-interior { padding-block: 24px; }
+  .marca { gap: 13px; }
+  .logo-provisorio { width: 60px; height: 60px; }
+  .marca-texto strong { font-size: 21px; }
+  .marca-texto > span { font-size: 12px; }
+  .datos-encabezado { flex-direction: column; gap: 17px; width: 100%; padding-top: 20px; border-top: 1px solid var(--borde); }
+  .enlaces { justify-content: space-between; gap: 0; }
+  .enlaces a { padding: 18px 9px; font-size: 11px; }
+  .portada-interior { min-height: 0; grid-template-columns: 1fr; gap: 30px; padding-block: 36px; }
+  .espacio-imagen { min-height: 185px; }
+  .presentacion { grid-column: 1; }
+  h1 { font-size: 44px; }
+  .informacion { grid-template-columns: 1fr; gap: 28px; padding-block: 35px; }
+  .bloque + .bloque { border-left: 0; border-top: 1px solid var(--borde); padding-left: 0; padding-top: 28px; }
+  footer span { display: block; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
