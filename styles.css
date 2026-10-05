@@ -167,3 +167,59 @@ footer span { color: var(--secundario); letter-spacing: 0; }
     transition: none;
   }
 }
+
+/* Ajustes para celular */
+@media (max-width: 640px) {
+  .encabezado-interior,
+  .datos-encabezado,
+  .marca {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .marca {
+    flex-shrink: 1;
+  }
+
+  .marca-texto,
+  .dato > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* Las cinco opciones se acomodan en varias filas */
+  .navegacion .enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .navegacion .enlaces a {
+    padding: 14px 12px;
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .portada-interior {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .presentacion {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* WhatsApp fijo dentro de la pantalla */
+  .boton-whatsapp {
+    position: fixed;
+    left: auto;
+    top: auto;
+    right: 16px;
+    bottom: 16px;
+    width: 54px;
+    height: 54px;
+    z-index: 1000;
+  }
+}
