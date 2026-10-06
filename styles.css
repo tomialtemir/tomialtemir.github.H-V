@@ -16,10 +16,23 @@ img { display: block; max-width: 100%; }
 .saltar { position: absolute; left: 16px; top: -100px; z-index: 5; background: white; padding: 12px; }
 .saltar:focus { top: 10px; }
 a:focus-visible { outline: 3px solid #e8a900; outline-offset: 5px; }
-.encabezado-interior { min-height: 150px; display: flex; align-items: center; justify-content: space-between; gap: 36px; padding-block: 28px; }
+.encabezado-interior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  min-height: 0;
+  padding-block: 20px;
+}
 .marca { display: flex; align-items: center; gap: 18px; text-decoration: none; flex-shrink: 0; }
 .logo-provisorio { display: grid; place-content: center; width: 70px; height: 70px; background: #edf4ff; border: 1px dashed #82a6d7; color: var(--azul); font-size: 17px; font-weight: 700; line-height: 1.15; text-align: center; }
-.logo { width: 90px; max-height: 90px; object-fit: contain; }
+.logo {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+}
 .marca-texto { display: flex; flex-direction: column; }
 .marca-texto strong { font-size: 25px; font-weight: 500; letter-spacing: 1.5px; }
 .marca-texto > span { color: var(--secundario); font-size: 13px; }
@@ -90,12 +103,30 @@ footer span { color: var(--secundario); letter-spacing: 0; }
 /* CELULAR */
 @media (max-width: 640px) {
   .contenedor { width: calc(100% - 36px); }
-  .encabezado-interior { padding-block: 24px; }
-  .marca { gap: 13px; }
-  .logo-provisorio { width: 60px; height: 60px; }
+  .encabezado-interior {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding-block: 6px 14px;
+}
+
+.marca {
+  align-self: center;
+  max-width: 100%;
+}
+
+.logo {
+  width: 220px;
+}
   .marca-texto strong { font-size: 21px; }
   .marca-texto > span { font-size: 12px; }
-  .datos-encabezado { flex-direction: column; gap: 17px; width: 100%; padding-top: 20px; border-top: 1px solid var(--borde); }
+  .datos-encabezado {
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding-top: 12px;
+  border-top: 1px solid var(--borde);
+}
   .enlaces { justify-content: space-between; gap: 0; }
   .enlaces a { padding: 18px 9px; font-size: 11px; }
   .portada-interior { min-height: 0; grid-template-columns: 1fr; gap: 30px; padding-block: 36px; }
