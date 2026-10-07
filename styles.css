@@ -75,7 +75,6 @@ a:focus-visible { outline: 3px solid #e8a900; outline-offset: 5px; }
 .espacio-imagen { display: none; }
 .espacio-imagen svg { width: 60px; height: 60px; }
 .presentacion { grid-column: 2; }
-.sobretitulo { color: #c5d9ee; letter-spacing: 3px; font-size: 11px; font-weight: 700; }
 h1 { margin: 18px 0; font-size: clamp(36px, 4.4vw, 60px); line-height: 1.08; letter-spacing: -1.7px; font-weight: 700; }
 h1 span { display: block; color: var(--amarillo); }
 .presentacion > p:not(.sobretitulo) { color: #d2dfed; font-size: 16px; max-width: 440px; margin-bottom: 28px; }
@@ -252,5 +251,608 @@ footer span { color: var(--secundario); letter-spacing: 0; }
     width: 54px;
     height: 54px;
     z-index: 1000;
+  }
+}
+/* Presentación de HV Obras & Servicios */
+.hv-presentacion {
+  --hv-acento: #0757bf;
+  padding: 72px 24px;
+  background-color: #f7f5f2;
+  color: #292929;
+}
+
+.hv-presentacion,
+.hv-presentacion * {
+  box-sizing: border-box;
+}
+
+.hv-presentacion-contenedor {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.hv-presentacion-etiqueta {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--hv-acento);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hv-presentacion-encabezado h2 {
+  margin: 0;
+  color: #292929;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.hv-presentacion-linea {
+  width: 64px;
+  height: 4px;
+  margin-top: 24px;
+  border-radius: 4px;
+  background-color: var(--hv-acento);
+}
+
+.hv-presentacion-texto p {
+  margin: 0 0 20px;
+  color: #505050;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.hv-presentacion-texto p:last-child {
+  margin-bottom: 0;
+}
+
+.hv-presentacion-texto strong {
+  color: #292929;
+  font-weight: 700;
+}
+
+/* Celulares y tablets */
+@media (max-width: 768px) {
+  .hv-presentacion {
+    padding: 44px 20px;
+  }
+
+  .hv-presentacion-contenedor {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hv-presentacion-texto p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+/* Seguridad y respaldo */
+.hv-seguridad {
+  --hv-acento: #0757bf;
+  padding: 72px 24px;
+  background-color: #ffffff;
+  color: #292929;
+}
+
+.hv-seguridad,
+.hv-seguridad * {
+  box-sizing: border-box;
+}
+
+.hv-seguridad-contenedor {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.hv-seguridad-encabezado {
+  max-width: 680px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.hv-seguridad-etiqueta {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--hv-acento);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hv-seguridad-encabezado h2 {
+  margin: 0 0 16px;
+  color: #292929;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+}
+
+.hv-seguridad-encabezado p {
+  margin: 0;
+  color: #505050;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hv-seguridad-lista {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hv-seguridad-lista > li {
+  grid-column: span 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 0;
+  padding: 26px;
+  background-color: #f7f5f2;
+  border: 1px solid #e8e2dd;
+  border-radius: 12px;
+}
+
+/* Centra las dos tarjetas de la segunda fila */
+.hv-seguridad-lista > li:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.hv-seguridad-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--hv-acento);
+  color: #f4f8f5;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hv-seguridad-lista h3 {
+  margin: 3px 0 8px;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.hv-seguridad-lista p {
+  margin: 0;
+  color: #505050;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .hv-seguridad-lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hv-seguridad-lista > li,
+  .hv-seguridad-lista > li:nth-child(4) {
+    grid-column: auto;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .hv-seguridad {
+    padding: 44px 20px;
+  }
+
+  .hv-seguridad-encabezado {
+    margin-bottom: 28px;
+  }
+
+  .hv-seguridad-encabezado p {
+    font-size: 16px;
+  }
+
+  .hv-seguridad-lista {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hv-seguridad-lista > li {
+    padding: 22px;
+  }
+}
+
+/* Referencias */
+.hv-referencias {
+  --hv-acento: #0757bf;
+  padding: 72px 24px;
+  background-color: #ffffff;
+  color: #292929;
+}
+
+.hv-referencias,
+.hv-referencias * {
+  box-sizing: border-box;
+}
+
+.hv-referencias-contenedor {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.hv-referencias-encabezado {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.hv-referencias-etiqueta {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--hv-acento);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hv-referencias-encabezado h2 {
+  margin: 0 0 16px;
+  color: #292929;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+}
+
+.hv-referencias-encabezado p {
+  margin: 0;
+  color: #505050;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hv-referencias-lista {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hv-referencias-lista > li {
+  min-width: 0;
+  margin: 0;
+  padding: 26px;
+  background-color: #f7f5f2;
+  border: 1px solid #e8e2dd;
+  border-top: 3px solid var(--hv-acento);
+  border-radius: 12px;
+}
+
+.hv-referencias-lista h3 {
+  margin: 0 0 12px;
+  color: #292929;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.hv-referencias-lista p {
+  margin: 0 0 12px;
+  color: #505050;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.hv-referencias-lista a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 6px 0;
+  color: var(--hv-acento);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.hv-referencias-lista a:hover {
+  text-decoration: underline;
+}
+
+.hv-referencias-lista a:focus-visible {
+  outline: 2px solid var(--hv-acento);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* INTA ocupa una fila completa */
+.hv-referencias-lista > .hv-referencias-destacada {
+  grid-column: 1 / -1;
+  background-color: #f0f0ff;
+}
+
+.hv-referencias-destacada h3 {
+  color: var(--hv-acento);
+  font-size: 26px;
+}
+
+.hv-referencias-inscripcion {
+  display: inline-block;
+  color: #505050;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .hv-referencias-lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .hv-referencias {
+    padding: 44px 20px;
+  }
+
+  .hv-referencias-encabezado {
+    margin-bottom: 28px;
+  }
+
+  .hv-referencias-encabezado p {
+    font-size: 16px;
+  }
+
+  .hv-referencias-lista {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hv-referencias-lista > li {
+    padding: 22px;
+  }
+}
+
+/* Contacto de HV */
+.hv-contacto {
+  --hv-acento: #0757bf;
+  padding: 64px 24px;
+  background-color: #f5f7fa;
+  color: #292929;
+}
+
+.hv-contacto,
+.hv-contacto * {
+  box-sizing: border-box;
+}
+
+.hv-contacto-contenedor {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.hv-contacto-encabezado {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.hv-contacto-etiqueta {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--hv-acento);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hv-contacto-encabezado h1 {
+  margin: 0 0 16px;
+  color: #292929;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+}
+
+.hv-contacto-encabezado p {
+  margin: 0;
+  color: #505050;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hv-contacto-tarjeta {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 32px;
+  padding: 40px;
+  border: 1px solid #e1e7ef;
+  border-radius: 22px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 36px rgb(0 0 0 / 6%);
+}
+
+.hv-contacto-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.hv-contacto-dato {
+  padding: 24px;
+  border: 1px solid #e1e7ef;
+  border-left: 4px solid var(--hv-acento);
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 4%);
+}
+
+.hv-contacto-dato h2 {
+  margin: 0 0 10px;
+  color: #505050;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hv-contacto-dato a {
+  color: var(--hv-acento);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.hv-contacto-dato a:hover {
+  text-decoration: underline;
+}
+
+.hv-contacto-dato p {
+  margin: 0;
+  color: #505050;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hv-contacto-formulario {
+  min-width: 0;
+}
+
+.hv-contacto-form {
+  display: grid;
+  gap: 18px;
+}
+
+.hv-contacto-campo label {
+  display: block;
+  margin-bottom: 8px;
+  color: #292929;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hv-contacto-campo input,
+.hv-contacto-campo textarea {
+  display: block;
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #292929;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hv-contacto-campo input::placeholder,
+.hv-contacto-campo textarea::placeholder {
+  color: #687385;
+  opacity: 1;
+}
+
+.hv-contacto-campo textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.hv-contacto-campo input:focus,
+.hv-contacto-campo textarea:focus {
+  border-color: var(--hv-acento);
+  outline: 2px solid var(--hv-acento);
+  outline-offset: 2px;
+}
+
+.hv-contacto-boton {
+  justify-self: start;
+  padding: 15px 28px;
+  border: 0;
+  border-radius: 28px;
+  background-color: var(--hv-acento);
+  color: #ffffff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hv-contacto-boton:hover:not(:disabled) {
+  box-shadow: 0 6px 18px rgb(7 87 191 / 25%);
+}
+
+.hv-contacto-boton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.hv-contacto-boton:focus-visible,
+.hv-contacto-dato a:focus-visible {
+  outline: 2px solid var(--hv-acento);
+  outline-offset: 4px;
+}
+
+.hv-contacto-aviso {
+  margin: 0;
+  color: #505050;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hv-contacto-trampa,
+.hv-contacto-alerta:empty {
+  display: none;
+}
+
+.hv-contacto-alerta:not(:empty) {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--hv-acento);
+  border-radius: 12px;
+  color: #292929;
+  line-height: 1.6;
+}
+
+/* Tablets y celulares */
+@media (max-width: 800px) {
+  .hv-contacto-tarjeta {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hv-contacto {
+    padding: 44px 16px;
+  }
+
+  .hv-contacto-tarjeta {
+    padding: 20px;
+    gap: 28px;
+  }
+
+  .hv-contacto-dato {
+    padding: 20px;
+  }
+
+  .hv-contacto-boton {
+    width: 100%;
   }
 }
