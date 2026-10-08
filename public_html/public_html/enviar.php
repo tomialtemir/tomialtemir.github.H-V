@@ -81,17 +81,17 @@ try {
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    // La web está en Hostinger, pero la cuenta de envío pertenece a Gmail.
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'hv.obrasyservicios@gmail.com';
-    $mail->Password = $smtpPass;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587;
+    // Envío mediante la casilla de Hostinger.
+$mail->Host = 'smtp.hostinger.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'web@hvobrasyservicios.com.ar';
+$mail->Password = $smtpPass;
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+$mail->Port = 465;
     $mail->CharSet = 'UTF-8';
     $mail->SMTPDebug = 0;
     $mail->Timeout = 20;
-    $mail->setFrom('hv.obrasyservicios@gmail.com', 'HV Obras & Servicios');
+    $mail->setFrom('web@hvobrasyservicios.com.ar', 'HV Obras & Servicios');
     $mail->addAddress('hv.obrasyservicios@gmail.com');
     $mail->addReplyTo($correo, $nombre);
     $mail->isHTML(false);

@@ -1,3 +1,7 @@
 HOSTINGER:
 USUARIO: hv.obrasyservicios@gmail.com
 PW: caslagay
+
+MAIL HOSTING:
+USUARIO: web@hvobrasyservicios.com.ar
+PW: Bocaputo.2026

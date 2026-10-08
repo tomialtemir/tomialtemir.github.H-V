@@ -1,0 +1,1217 @@
+/* HV Obras & Servicios. Ajustes por pantalla al final del archivo. */
+
+/* 1. Variables y estilos generales */
+:root {
+  --azul: #0757bf;
+  --azul-oscuro: #10335c;
+  --amarillo: #ffda55;
+  --texto: #24354b;
+  --secundario: #617085;
+  --borde: #dfe6ee;
+  --hv-acento: var(--azul);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: #fff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.contenedor {
+  width: min(1180px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.saltar {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 5;
+  background: white;
+  padding: 12px;
+}
+
+.saltar:focus {
+  top: 10px;
+}
+
+a:focus-visible {
+  outline: 3px solid #e8a900;
+  outline-offset: 5px;
+}
+
+h1 {
+  margin: 18px 0;
+  font-size: clamp(36px, 4.4vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -1.7px;
+  font-weight: 700;
+}
+
+h1 span {
+  display: block;
+  color: var(--amarillo);
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+address {
+  font-style: normal;
+}
+
+address strong {
+  color: var(--texto);
+  font-weight: 500;
+}
+
+/* 2. Encabezado y logo */
+.encabezado-interior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding-block: 20px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+.datos-encabezado {
+  display: flex;
+  gap: 35px;
+}
+
+.dato {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.icono {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  color: var(--azul);
+  margin-top: 5px;
+}
+
+.etiqueta {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--secundario);
+}
+
+.dato p {
+  margin: 6px 0 0;
+  font-size: 13px;
+}
+
+.dato p span {
+  color: var(--secundario);
+}
+
+/* 3. Navegación centrada */
+.navegacion {
+  background: var(--azul);
+  color: #fff;
+}
+
+.enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.enlaces a {
+  padding: 20px 27px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 12px;
+  border-bottom: 3px solid transparent;
+}
+
+.enlaces a[aria-current="page"] {
+  border-bottom-color: var(--amarillo);
+}
+
+.enlaces a:hover {
+  background: #ffffff15;
+  border-bottom-color: var(--amarillo);
+}
+
+/* 4. Portada de Nosotros */
+.portada {
+  background-color: #143e6b;
+  background-image:
+    linear-gradient(90deg, rgba(10, 35, 66, 0.15), rgba(10, 35, 66, 0.82)),
+    url("./imagenes/principal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.portada-interior {
+  min-height: 510px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding-block: 65px;
+}
+
+.presentacion {
+  grid-column: 2;
+}
+
+/* 5. Información y pie de página */
+.informacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: 55px;
+  gap: 45px;
+}
+
+.bloque {
+  display: flex;
+  gap: 24px;
+  min-width: 0;
+}
+
+.bloque + .bloque {
+  border-left: 1px solid var(--borde);
+  padding-left: 45px;
+}
+
+.numero {
+  color: var(--azul);
+  font-size: 12px;
+  font-weight: 700;
+  padding-top: 8px;
+}
+
+.bloque p {
+  color: var(--secundario);
+  font-size: 14px;
+  margin: 4px 0;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  border-top: 1px solid var(--borde);
+  padding: 23px 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+footer span {
+  color: var(--secundario);
+  letter-spacing: 0;
+}
+
+/* 6. Botón flotante de WhatsApp */
+.boton-whatsapp {
+  position: fixed;
+  right: calc(22px + env(safe-area-inset-right, 0px));
+  bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.boton-whatsapp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.22));
+}
+
+.boton-whatsapp:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 5px;
+}
+
+/* 7. Presentación de la empresa */
+.hv-presentacion {
+  padding: 72px 24px;
+  background-color: #f7f5f2;
+  color: #292929;
+}
+
+.hv-presentacion-contenedor {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.hv-presentacion-encabezado h2 {
+  margin: 0;
+  color: #292929;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.hv-presentacion-linea {
+  width: 64px;
+  height: 4px;
+  margin-top: 24px;
+  border-radius: 4px;
+  background-color: var(--hv-acento);
+}
+
+.hv-presentacion-texto p {
+  margin: 0 0 20px;
+  color: #505050;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.hv-presentacion-texto p:last-child {
+  margin-bottom: 0;
+}
+
+.hv-presentacion-texto strong {
+  color: #292929;
+  font-weight: 700;
+}
+
+/* 8. Seguridad y respaldo */
+.hv-seguridad {
+  padding: 72px 24px;
+  background-color: #ffffff;
+  color: #292929;
+}
+
+.hv-seguridad-contenedor,
+.hv-contacto-contenedor {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.hv-seguridad-encabezado {
+  max-width: 680px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.hv-seguridad-etiqueta {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--hv-acento);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hv-seguridad-encabezado h2,
+.hv-contacto-encabezado h1 {
+  margin: 0 0 16px;
+  color: #292929;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+}
+
+.hv-seguridad-encabezado p,
+.hv-contacto-encabezado p {
+  margin: 0;
+  color: #505050;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hv-seguridad-lista {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hv-seguridad-lista > li {
+  grid-column: span 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 0;
+  padding: 26px;
+  background-color: #f7f5f2;
+  border: 1px solid #e8e2dd;
+  border-radius: 12px;
+}
+
+.hv-seguridad-lista > li:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.hv-seguridad-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--hv-acento);
+  color: #f4f8f5;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hv-seguridad-lista h3 {
+  margin: 3px 0 8px;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.hv-seguridad-lista p {
+  margin: 0;
+  color: #505050;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* 9. Contacto y formulario */
+.hv-contacto {
+  padding: 64px 24px;
+  background-color: #f5f7fa;
+  color: #292929;
+}
+
+.hv-contacto-encabezado {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.hv-contacto-tarjeta {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 32px;
+  padding: 40px;
+  border: 1px solid #e1e7ef;
+  border-radius: 22px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 36px rgb(0 0 0 / 6%);
+}
+
+.hv-contacto-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.hv-contacto-dato {
+  padding: 24px;
+  border: 1px solid #e1e7ef;
+  border-left: 4px solid var(--hv-acento);
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 4%);
+}
+
+.hv-contacto-dato h2 {
+  margin: 0 0 10px;
+  color: #505050;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hv-contacto-dato a {
+  color: var(--hv-acento);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.hv-contacto-dato a:hover {
+  text-decoration: underline;
+}
+
+.hv-contacto-dato p {
+  margin: 0;
+  color: #505050;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hv-contacto-formulario {
+  min-width: 0;
+}
+
+.hv-contacto-form {
+  display: grid;
+  gap: 18px;
+}
+
+.hv-contacto-campo label {
+  display: block;
+  margin-bottom: 8px;
+  color: #292929;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hv-contacto-campo input,
+.hv-contacto-campo textarea {
+  display: block;
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #292929;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hv-contacto-campo input::placeholder,
+.hv-contacto-campo textarea::placeholder {
+  color: #687385;
+  opacity: 1;
+}
+
+.hv-contacto-campo textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.hv-contacto-campo input:focus,
+.hv-contacto-campo textarea:focus {
+  border-color: var(--hv-acento);
+  outline: 2px solid var(--hv-acento);
+  outline-offset: 2px;
+}
+
+.hv-contacto-boton {
+  justify-self: start;
+  padding: 15px 28px;
+  border: 0;
+  border-radius: 28px;
+  background-color: var(--hv-acento);
+  color: #ffffff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hv-contacto-boton:hover:not(:disabled) {
+  box-shadow: 0 6px 18px rgb(7 87 191 / 25%);
+}
+
+.hv-contacto-boton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.hv-contacto-boton:focus-visible,
+.hv-contacto-dato a:focus-visible {
+  outline: 2px solid var(--hv-acento);
+  outline-offset: 4px;
+}
+
+.hv-contacto-trampa,
+.hv-contacto-alerta:empty {
+  display: none;
+}
+
+.hv-contacto-alerta:not(:empty) {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--hv-acento);
+  border-radius: 12px;
+  color: #292929;
+  line-height: 1.6;
+}
+
+/* 10. Referencias */
+.respaldo {
+  padding: 60px 0;
+  background-color: #f4f7fb;
+}
+
+.respaldo-cabecera {
+  max-width: 850px;
+  margin-bottom: 36px;
+}
+
+.respaldo .respaldo-titulo {
+  margin: 0;
+  color: var(--azul-oscuro);
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  overflow-wrap: anywhere;
+}
+
+.respaldo-cabecera::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin-top: 20px;
+  background-color: var(--amarillo);
+}
+
+.respaldo-columnas {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  gap: 44px;
+}
+
+.respaldo-principal {
+  display: grid;
+  gap: 30px;
+  min-width: 0;
+}
+
+.respaldo-item {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+}
+
+.respaldo-check {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  border-radius: 4px;
+  background-color: var(--azul);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.respaldo h2 {
+  margin: 0 0 10px;
+  color: var(--azul-oscuro);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.respaldo p {
+  margin: 0;
+  color: var(--secundario);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.respaldo strong {
+  color: var(--texto);
+}
+
+.respaldo-administraciones {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.respaldo-administraciones li {
+  padding: 12px 0;
+}
+
+.respaldo-administraciones li + li {
+  border-top: 1px solid var(--borde);
+}
+
+.respaldo-nombre {
+  display: block;
+  color: var(--texto);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.respaldo-telefono {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  color: var(--azul);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.respaldo-telefono:hover {
+  color: var(--azul-oscuro);
+}
+
+.respaldo-telefono:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.respaldo-lista {
+  margin: 16px 0 0;
+  padding-left: 20px;
+  color: var(--texto);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.respaldo-lista li {
+  padding-left: 4px;
+  overflow-wrap: anywhere;
+}
+
+.respaldo-lista li + li {
+  margin-top: 8px;
+}
+
+.respaldo-lista li::marker {
+  color: var(--azul);
+}
+
+.respaldo-clientes {
+  min-width: 0;
+  padding-left: 36px;
+  border-left: 1px solid var(--borde);
+}
+
+/* 11. Trabajos realizados */
+.obras {
+  padding: 60px 0;
+  background-color: #f4f7fb;
+}
+
+.obras-cabecera {
+  max-width: 780px;
+  margin-bottom: 36px;
+}
+
+.obras .obras-titulo {
+  margin: 0 0 18px;
+  color: var(--azul-oscuro);
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+  overflow-wrap: anywhere;
+}
+
+.obras-intro {
+  margin: 0;
+  max-width: 680px;
+  color: var(--secundario);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.obras-grilla {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.obra-tarjeta {
+  min-width: 0;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(16, 51, 92, 0.05);
+}
+
+.obra-zona {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 100px;
+  padding: 24px 28px;
+  background-color: var(--azul-oscuro);
+}
+
+.obra-zona::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+  width: 44px;
+  height: 3px;
+  background-color: var(--amarillo);
+}
+
+.obra-numero {
+  flex-shrink: 0;
+  color: var(--amarillo);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.obra-zona h2 {
+  min-width: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.obra-lista {
+  list-style: none;
+  margin: 0;
+  padding: 8px 28px;
+}
+
+.obra-lista li {
+  position: relative;
+  padding: 20px 0 20px 18px;
+}
+
+.obra-lista li + li {
+  border-top: 1px solid var(--borde);
+}
+
+.obra-lista li::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--azul);
+}
+
+.obra-lista h3 {
+  margin: 0 0 6px;
+  color: var(--azul-oscuro);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.obra-lista p {
+  margin: 0;
+  color: var(--secundario);
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+/* Preparado para las futuras fotografías de las obras */
+.obra-foto {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.obras-cierre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 32px;
+  padding: 24px 28px;
+  background-color: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.obras-cierre p {
+  margin: 0;
+  color: var(--azul-oscuro);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.obras-contacto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 46px;
+  max-width: 100%;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background-color: var(--amarillo);
+  color: var(--azul-oscuro);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.obras-contacto span {
+  flex-shrink: 0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.obras-contacto:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 4px;
+}
+
+/* Adaptación: (max-width: 1000px) */
+@media (max-width: 1000px) {
+  .encabezado-interior {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .datos-encabezado {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .portada-interior {
+    gap: 35px;
+  }
+}
+
+/* Adaptación: (max-width: 900px) */
+@media (max-width: 900px) {
+  .hv-seguridad-lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hv-seguridad-lista > li,
+  .hv-seguridad-lista > li:nth-child(4) {
+    grid-column: auto;
+  }
+}
+
+/* Adaptación: (max-width: 800px) */
+@media (max-width: 800px) {
+  .hv-contacto-tarjeta {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+}
+
+/* Adaptación: (max-width: 768px) */
+@media (max-width: 768px) {
+  .hv-presentacion {
+    padding: 44px 20px;
+  }
+
+  .hv-presentacion-contenedor {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hv-presentacion-texto p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .respaldo {
+    padding: 36px 0;
+  }
+
+  .respaldo-cabecera {
+    margin-bottom: 28px;
+  }
+
+  .respaldo-columnas {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .respaldo-clientes {
+    padding: 26px 0 0;
+    border-left: none;
+    border-top: 1px solid var(--borde);
+  }
+
+  .respaldo-item {
+    gap: 10px;
+  }
+
+  .respaldo h2 {
+    font-size: 18px;
+  }
+
+  .respaldo p,
+  .respaldo-lista,
+  .respaldo-nombre {
+    font-size: 15px;
+  }
+
+  .obras {
+    padding: 36px 0;
+  }
+
+  .obras-cabecera {
+    margin-bottom: 28px;
+  }
+
+  .obras-grilla {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .obra-zona {
+    min-height: 86px;
+    gap: 14px;
+    padding: 22px 20px;
+  }
+
+  .obra-zona::after {
+    left: 20px;
+  }
+
+  .obra-zona h2 {
+    font-size: 20px;
+  }
+
+  .obra-numero {
+    font-size: 26px;
+  }
+
+  .obra-lista {
+    padding: 6px 20px;
+  }
+
+  .obras-cierre {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .obras-contacto {
+    width: 100%;
+  }
+}
+
+/* Adaptación: (max-width: 640px) */
+@media (max-width: 640px) {
+  .contenedor {
+    width: calc(100% - 36px);
+  }
+
+  .encabezado-interior {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-block: 6px 14px;
+  }
+
+  .encabezado-interior,
+  .datos-encabezado,
+  .marca {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .marca {
+    align-self: center;
+    flex-shrink: 1;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  .datos-encabezado {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px solid var(--borde);
+  }
+
+  .dato > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .enlaces {
+    gap: 0;
+  }
+
+  .enlaces a {
+    padding: 14px 12px;
+    font-size: 11px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .portada-interior {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-block: 36px;
+  }
+
+  .presentacion {
+    grid-column: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  .informacion {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 35px;
+  }
+
+  .bloque + .bloque {
+    border-left: 0;
+    border-top: 1px solid var(--borde);
+    padding-left: 0;
+    padding-top: 28px;
+  }
+
+  footer span {
+    display: block;
+  }
+
+  .boton-whatsapp {
+    width: 54px;
+    height: 54px;
+    right: calc(16px + env(safe-area-inset-right, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Adaptación: (max-width: 600px) */
+@media (max-width: 600px) {
+  .hv-seguridad {
+    padding: 44px 20px;
+  }
+
+  .hv-seguridad-encabezado {
+    margin-bottom: 28px;
+  }
+
+  .hv-seguridad-encabezado p {
+    font-size: 16px;
+  }
+
+  .hv-seguridad-lista {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hv-seguridad-lista > li {
+    padding: 22px;
+  }
+}
+
+/* Adaptación: (max-width: 480px) */
+@media (max-width: 480px) {
+  .hv-contacto {
+    padding: 44px 16px;
+  }
+
+  .hv-contacto-tarjeta {
+    padding: 20px;
+    gap: 28px;
+  }
+
+  .hv-contacto-dato {
+    padding: 20px;
+  }
+
+  .hv-contacto-boton {
+    width: 100%;
+  }
+}
+
+/* Adaptación: (hover: hover) */
+@media (hover: hover) {
+  .boton-whatsapp:hover {
+    transform: translateY(-3px);
+  }
+
+  .obras-contacto:hover {
+    background-color: #ffe78f;
+  }
+}
+
+/* Adaptación: (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .boton-whatsapp {
+    transition: none;
+  }
+}
