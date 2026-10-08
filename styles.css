@@ -1,14 +1,14 @@
-/* HV Obras & Servicios. Ajustes por pantalla al final del archivo. */
+/* HV Obras & Servicios — paleta gris y azul. */
 
-/* 1. Variables y estilos generales */
+/* 1. Paleta: gris principal y azul de acento */
 :root {
-  --azul: #0757bf;
-  --azul-oscuro: #10335c;
-  --amarillo: #ffda55;
-  --texto: #24354b;
-  --secundario: #617085;
-  --borde: #dfe6ee;
-  --hv-acento: var(--azul);
+  --gris: #6c7177;
+  --azul: #10335c;
+  --azul-hover: #054599;
+  --texto: #34383d;
+  --secundario: #6c7177;
+  --borde: #e1e3e5;
+  --hv-acento: var(--gris);
 }
 
 * {
@@ -56,7 +56,7 @@ img {
 }
 
 a:focus-visible {
-  outline: 3px solid #e8a900;
+  outline: 3px solid var(--azul);
   outline-offset: 5px;
 }
 
@@ -70,7 +70,7 @@ h1 {
 
 h1 span {
   display: block;
-  color: var(--amarillo);
+  color: var(--azul);
 }
 
 h2 {
@@ -124,7 +124,7 @@ address strong {
   width: 25px;
   height: 25px;
   flex-shrink: 0;
-  color: var(--azul);
+  color: var(--gris);
   margin-top: 5px;
 }
 
@@ -144,9 +144,9 @@ address strong {
   color: var(--secundario);
 }
 
-/* 3. Navegación centrada */
+/* 3. Navegación centrada: aria-current indica la página activa */
 .navegacion {
-  background: var(--azul);
+  background: var(--gris);
   color: #fff;
 }
 
@@ -168,19 +168,18 @@ address strong {
 }
 
 .enlaces a[aria-current="page"] {
-  border-bottom-color: var(--amarillo);
+  border-bottom-color: var(--azul);
 }
 
 .enlaces a:hover {
   background: #ffffff15;
-  border-bottom-color: var(--amarillo);
+  border-bottom-color: var(--azul);
 }
 
-/* 4. Portada de Nosotros */
+/* 4. Portada */
 .portada {
-  background-color: #143e6b;
-  background-image:
-    linear-gradient(90deg, rgba(10, 35, 66, 0.15), rgba(10, 35, 66, 0.82)),
+  background-color: var(--gris);
+  background-image: linear-gradient(90deg, rgba(108, 113, 119, 0.15), rgba(108, 113, 119, 0.82)),
     url("./imagenes/principal.jpg");
   background-size: cover;
   background-position: center;
@@ -220,8 +219,6 @@ address strong {
   padding-left: 45px;
 }
 
-
-
 .bloque p {
   color: var(--secundario);
   font-size: 14px;
@@ -241,7 +238,7 @@ footer span {
   letter-spacing: 0;
 }
 
-/* 6. Botón flotante de WhatsApp */
+/* 6. WhatsApp */
 .boton-whatsapp {
   position: fixed;
   right: calc(22px + env(safe-area-inset-right, 0px));
@@ -265,11 +262,11 @@ footer span {
 }
 
 .boton-whatsapp:focus-visible {
-  outline: 3px solid var(--azul);
+  outline: 3px solid var(--gris);
   outline-offset: 5px;
 }
 
-/* 7. Presentación de la empresa */
+/* 7. Presentación */
 .hv-presentacion {
   padding: 72px 24px;
   background-color: #f7f5f2;
@@ -390,6 +387,7 @@ footer span {
   grid-column: 2 / span 2;
 }
 
+/* Excepción: círculos azules con símbolos blancos */
 .hv-seguridad-icono {
   display: flex;
   align-items: center;
@@ -398,8 +396,8 @@ footer span {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--hv-acento);
-  color: #f4f8f5;
+  background-color: var(--azul);
+  color: #fff;
   font-size: 18px;
   font-weight: 700;
 }
@@ -421,7 +419,7 @@ footer span {
 /* 9. Contacto y formulario */
 .hv-contacto {
   padding: 64px 24px;
-  background-color: #f5f7fa;
+  background-color: #f6f6f7;
   color: #292929;
 }
 
@@ -436,7 +434,7 @@ footer span {
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   gap: 32px;
   padding: 40px;
-  border: 1px solid #e1e7ef;
+  border: 1px solid #e1e3e5;
   border-radius: 22px;
   background-color: #ffffff;
   box-shadow: 0 12px 36px rgb(0 0 0 / 6%);
@@ -451,7 +449,7 @@ footer span {
 
 .hv-contacto-dato {
   padding: 24px;
-  border: 1px solid #e1e7ef;
+  border: 1px solid #e1e3e5;
   border-left: 4px solid var(--hv-acento);
   border-radius: 14px;
   background-color: #ffffff;
@@ -510,7 +508,7 @@ footer span {
   display: block;
   width: 100%;
   padding: 15px 16px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #cdd0d3;
   border-radius: 12px;
   background-color: #ffffff;
   color: #292929;
@@ -521,7 +519,7 @@ footer span {
 
 .hv-contacto-campo input::placeholder,
 .hv-contacto-campo textarea::placeholder {
-  color: #687385;
+  color: #6c7177;
   opacity: 1;
 }
 
@@ -551,7 +549,7 @@ footer span {
 }
 
 .hv-contacto-boton:hover:not(:disabled) {
-  box-shadow: 0 6px 18px rgb(7 87 191 / 25%);
+  box-shadow: 0 6px 18px rgb(108 113 119 / 25%);
 }
 
 .hv-contacto-boton:disabled {
@@ -582,7 +580,7 @@ footer span {
 /* 10. Referencias */
 .respaldo {
   padding: 60px 0;
-  background-color: #f4f7fb;
+  background-color: #f5f5f6;
 }
 
 .respaldo-cabecera {
@@ -592,7 +590,7 @@ footer span {
 
 .respaldo .respaldo-titulo {
   margin: 0;
-  color: var(--azul-oscuro);
+  color: var(--gris);
   font-size: clamp(26px, 3vw, 38px);
   font-weight: 700;
   line-height: 1.2;
@@ -606,7 +604,7 @@ footer span {
   width: 60px;
   height: 3px;
   margin-top: 20px;
-  background-color: var(--amarillo);
+  background-color: var(--azul);
 }
 
 .respaldo-columnas {
@@ -635,7 +633,7 @@ footer span {
   height: 24px;
   margin-top: 2px;
   border-radius: 4px;
-  background-color: var(--azul);
+  background-color: var(--gris);
   color: #fff;
   font-size: 17px;
   font-weight: 700;
@@ -644,7 +642,7 @@ footer span {
 
 .respaldo h2 {
   margin: 0 0 10px;
-  color: var(--azul-oscuro);
+  color: var(--gris);
   font-size: 20px;
   font-weight: 700;
   line-height: 1.35;
@@ -690,7 +688,7 @@ footer span {
   align-items: center;
   min-height: 44px;
   max-width: 100%;
-  color: var(--azul);
+  color: var(--gris);
   font-size: 16px;
   font-weight: 500;
   text-decoration: underline;
@@ -699,11 +697,11 @@ footer span {
 }
 
 .respaldo-telefono:hover {
-  color: var(--azul-oscuro);
+  color: var(--gris);
 }
 
 .respaldo-telefono:focus-visible {
-  outline: 3px solid var(--azul);
+  outline: 3px solid var(--gris);
   outline-offset: 3px;
   border-radius: 3px;
 }
@@ -726,7 +724,7 @@ footer span {
 }
 
 .respaldo-lista li::marker {
-  color: var(--azul);
+  color: var(--gris);
 }
 
 .respaldo-clientes {
@@ -738,7 +736,7 @@ footer span {
 /* 11. Trabajos realizados */
 .obras {
   padding: 60px 0;
-  background-color: #f4f7fb;
+  background-color: #f5f5f6;
 }
 
 .obras-cabecera {
@@ -748,7 +746,7 @@ footer span {
 
 .obras .obras-titulo {
   margin: 0 0 18px;
-  color: var(--azul-oscuro);
+  color: var(--gris);
   font-size: clamp(28px, 3.2vw, 42px);
   font-weight: 700;
   line-height: 1.15;
@@ -776,9 +774,10 @@ footer span {
   background-color: #fff;
   border: 1px solid var(--borde);
   border-radius: 12px;
-  box-shadow: 0 5px 18px rgba(16, 51, 92, 0.05);
+  box-shadow: 0 5px 18px rgba(108, 113, 119, 0.05);
 }
 
+/* Encabezados de zonas: gris con letras y números blancos */
 .obra-zona {
   position: relative;
   display: flex;
@@ -786,7 +785,8 @@ footer span {
   gap: 18px;
   min-height: 100px;
   padding: 24px 28px;
-  background-color: var(--azul-oscuro);
+  background-color: var(--gris);
+  color: #fff;
 }
 
 .obra-zona::after {
@@ -796,12 +796,12 @@ footer span {
   bottom: 0;
   width: 44px;
   height: 3px;
-  background-color: var(--amarillo);
+  background-color: var(--azul);
 }
 
 .obra-numero {
   flex-shrink: 0;
-  color: var(--amarillo);
+  color: #fff;
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
@@ -840,12 +840,12 @@ footer span {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--azul);
+  background-color: var(--gris);
 }
 
 .obra-lista h3 {
   margin: 0 0 6px;
-  color: var(--azul-oscuro);
+  color: var(--gris);
   font-size: 17px;
   font-weight: 700;
   line-height: 1.4;
@@ -860,7 +860,7 @@ footer span {
   overflow-wrap: anywhere;
 }
 
-/* Preparado para las futuras fotografías de las obras */
+/* Preparado para futuras fotografías */
 .obra-foto {
   display: block;
   width: 100%;
@@ -884,11 +884,12 @@ footer span {
 
 .obras-cierre p {
   margin: 0;
-  color: var(--azul-oscuro);
+  color: var(--gris);
   font-size: 20px;
   font-weight: 600;
 }
 
+/* Botón azul con texto blanco */
 .obras-contacto {
   display: inline-flex;
   align-items: center;
@@ -898,12 +899,13 @@ footer span {
   max-width: 100%;
   padding: 12px 20px;
   border-radius: 6px;
-  background-color: var(--amarillo);
-  color: var(--azul-oscuro);
+  background-color: var(--azul);
+  color: #fff;
   font-size: 14px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .obras-contacto span {
@@ -913,11 +915,46 @@ footer span {
 }
 
 .obras-contacto:focus-visible {
+  outline: 3px solid var(--gris);
+  outline-offset: 4px;
+}
+
+/* 12. Flecha transparente encima de WhatsApp */
+.volver-arriba {
+  position: fixed;
+  left: auto;
+  right: calc(38px + env(safe-area-inset-right, 0px));
+  bottom: calc(160px + env(safe-area-inset-bottom, 0px));
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.volver-arriba[hidden] {
+  display: none;
+}
+
+.volver-arriba img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.volver-arriba:focus-visible {
   outline: 3px solid var(--azul);
   outline-offset: 4px;
 }
 
-/* Adaptación: (max-width: 1000px) */
 @media (max-width: 1000px) {
   .encabezado-interior {
     flex-wrap: wrap;
@@ -932,9 +969,9 @@ footer span {
   .portada-interior {
     gap: 35px;
   }
+
 }
 
-/* Adaptación: (max-width: 900px) */
 @media (max-width: 900px) {
   .hv-seguridad-lista {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -944,17 +981,17 @@ footer span {
   .hv-seguridad-lista > li:nth-child(4) {
     grid-column: auto;
   }
+
 }
 
-/* Adaptación: (max-width: 800px) */
 @media (max-width: 800px) {
   .hv-contacto-tarjeta {
     grid-template-columns: 1fr;
     padding: 28px;
   }
+
 }
 
-/* Adaptación: (max-width: 768px) */
 @media (max-width: 768px) {
   .hv-presentacion {
     padding: 44px 20px;
@@ -1020,6 +1057,8 @@ footer span {
     min-height: 86px;
     gap: 14px;
     padding: 22px 20px;
+    background-color: var(--gris);
+    color: #fff;
   }
 
   .obra-zona::after {
@@ -1028,10 +1067,12 @@ footer span {
 
   .obra-zona h2 {
     font-size: 20px;
+    color: #fff;
   }
 
   .obra-numero {
     font-size: 26px;
+    color: #fff;
   }
 
   .obra-lista {
@@ -1047,10 +1088,13 @@ footer span {
 
   .obras-contacto {
     width: 100%;
+    background-color: var(--azul);
+    color: #fff;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
   }
+
 }
 
-/* Adaptación: (max-width: 640px) */
 @media (max-width: 640px) {
   .contenedor {
     width: calc(100% - 36px);
@@ -1143,9 +1187,16 @@ footer span {
     right: calc(16px + env(safe-area-inset-right, 0px));
     bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   }
+
+  .volver-arriba {
+    right: calc(21px + env(safe-area-inset-right, 0px));
+    bottom: calc(106px + env(safe-area-inset-bottom, 0px));
+    width: 44px;
+    height: 44px;
+  }
+
 }
 
-/* Adaptación: (max-width: 600px) */
 @media (max-width: 600px) {
   .hv-seguridad {
     padding: 44px 20px;
@@ -1167,9 +1218,9 @@ footer span {
   .hv-seguridad-lista > li {
     padding: 22px;
   }
+
 }
 
-/* Adaptación: (max-width: 480px) */
 @media (max-width: 480px) {
   .hv-contacto {
     padding: 44px 16px;
@@ -1187,20 +1238,27 @@ footer span {
   .hv-contacto-boton {
     width: 100%;
   }
+
 }
 
-/* Adaptación: (hover: hover) */
 @media (hover: hover) {
   .boton-whatsapp:hover {
     transform: translateY(-3px);
   }
 
   .obras-contacto:hover {
-    background-color: #ffe78f;
+    background-color: var(--azul-hover);
+    color: #fff;
+    box-shadow: 0 6px 18px rgb(16 51 92 / 20%);
   }
+
+  .volver-arriba:hover {
+    background: transparent;
+    transform: translateY(-3px);
+  }
+
 }
 
-/* Adaptación: (prefers-reduced-motion: reduce) */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1209,64 +1267,14 @@ footer span {
   .boton-whatsapp {
     transition: none;
   }
-}
 
-/* Flecha transparente, encima de WhatsApp */
-.volver-arriba {
-  position: fixed;
-  left: auto;
-  right: calc(38px + env(safe-area-inset-right, 0px));
-  bottom: calc(160px + env(safe-area-inset-bottom, 0px));
-  z-index: 1000;
-
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-.volver-arriba[hidden] {
-  display: none;
-}
-
-.volver-arriba img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.volver-arriba:focus-visible {
-  outline: 3px solid var(--amarillo);
-  outline-offset: 4px;
-}
-
-@media (hover: hover) {
-  .volver-arriba:hover {
-    background: transparent;
-    transform: translateY(-3px);
-  }
-}
-
-@media (max-width: 640px) {
-  .volver-arriba {
-    right: calc(21px + env(safe-area-inset-right, 0px));
-    bottom: calc(106px + env(safe-area-inset-bottom, 0px));
-    width: 44px;
-    height: 44px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
   .volver-arriba {
     transition: none;
   }
+
+  .obras-contacto {
+    transition: none;
+  }
+
 }
+
