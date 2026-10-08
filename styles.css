@@ -220,12 +220,7 @@ address strong {
   padding-left: 45px;
 }
 
-.numero {
-  color: var(--azul);
-  font-size: 12px;
-  font-weight: 700;
-  padding-top: 8px;
-}
+
 
 .bloque p {
   color: var(--secundario);
