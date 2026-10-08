@@ -10,6 +10,7 @@
     <title>HV Obras & Servicios</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -84,15 +85,20 @@
       </div>
     </header>
 
-    <nav class="navegacion" aria-label="Navegación principal">
-      <div class="contenedor enlaces">
-        <a href="index.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="trabajos.html">Trabajos Realizados</a>
-        <a href="referencias.html">Referencias</a>
-        <a href="contacto.html" aria-current="page">Contacto</a>
-      </div>
-    </nav>
+    <nav
+  id="navegacion"
+  class="navegacion"
+  aria-label="Navegación principal"
+  tabindex="-1"
+>
+  <div class="contenedor enlaces">
+    <a href="index.html" aria-current="page">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="trabajos.html">Trabajos Realizados</a>
+    <a href="referencias.html">Referencias</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</nav>
 
     <main id="inicio" tabindex="-1">
       <section class="hv-contacto" aria-labelledby="hv-contacto-titulo">
@@ -216,5 +222,19 @@
         HV Obras & Servicios<span>· Todos los derechos reservados.</span>
       </div>
     </footer>
+    <!-- Flecha para volver al menú -->
+<a
+  class="volver-arriba"
+  href="#navegacion"
+  aria-label="Volver al menú principal"
+  hidden
+>
+  <img
+    src="imagenes/flecha-arriba.png"
+    alt=""
+    width="26"
+    height="26"
+  >
+</a>
   </body>
 </html>
