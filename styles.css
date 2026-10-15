@@ -189,8 +189,9 @@ address strong {
   background-color: var(--gris);
   background-image: linear-gradient(90deg, rgba(108, 113, 119, 0.15), rgba(108, 113, 119, 0.82)),
     url("./imagenes/principal.jpg");
-  background-size: cover;
-  background-position: 50% 60%;
+  background-size: auto 370%;                                                  /* REEMPLAZAR ESTA LÍNEA POR: background-size: cover; */
+background-position: center; 
+  background-position: 50% 23%;
   background-repeat: no-repeat;
   color: #fff;
 }
