@@ -161,3 +161,28 @@
     iniciar();
   }
 })();
+// Trabajos: abrir sin navegar; compatible con mouse, teclado y pantallas táctiles.
+(() => {
+  function iniciarSubmenu() {
+    document.querySelectorAll('.nav-trabajos').forEach(grupo => {
+      const boton = grupo.querySelector('button');
+      const lista = grupo.querySelector('.nav-submenu');
+      const abrir = estado => {
+        grupo.classList.toggle('abierto', estado);
+        boton.setAttribute('aria-expanded', String(estado));
+        lista.inert = !estado;
+      };
+      grupo.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') abrir(true); });
+      grupo.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse' && !grupo.contains(document.activeElement)) abrir(false); });
+      boton.addEventListener('click', () => abrir(boton.getAttribute('aria-expanded') !== 'true'));
+      grupo.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { abrir(false); boton.focus(); }
+        if (e.key === 'ArrowDown' && e.target === boton) { e.preventDefault(); abrir(true); lista.querySelector('a').focus(); }
+      });
+      grupo.addEventListener('focusout', e => { if (!grupo.contains(e.relatedTarget)) abrir(false); });
+      document.addEventListener('click', e => { if (!grupo.contains(e.target)) abrir(false); });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciarSubmenu);
+  else iniciarSubmenu();
+})();

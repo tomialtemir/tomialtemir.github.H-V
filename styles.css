@@ -1333,3 +1333,67 @@ footer span {
 }
 @media (max-width: 380px) { .sv-coberturas { grid-template-columns: minmax(0, 1fr); } }
 @media (prefers-reduced-motion: reduce) { .sv-boton { transition: none; } }
+
+/* 14. Submenú de trabajos y páginas individuales */
+.navegacion { position: relative; z-index: 20; }
+.nav-trabajos { position: relative; display: flex; }
+.nav-trabajos-boton {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 20px 27px; border: 0; border-bottom: 3px solid transparent;
+  background: transparent; color: inherit; font: inherit; line-height: inherit;
+  text-transform: uppercase; font-weight: 700; letter-spacing: 1px; font-size: 12px; cursor: pointer;
+}
+.nav-trabajos-boton:hover, .nav-trabajos-boton[aria-expanded="true"] { background: #ffffff15; border-bottom-color: var(--azul); }
+.nav-trabajos-activo > button { border-bottom-color: var(--azul); }
+.nav-trabajos-boton:focus-visible { outline: 3px solid var(--azul); outline-offset: -5px; }
+.nav-chevron { display: inline-block; transition: transform .2s ease; }
+.nav-trabajos-boton[aria-expanded="true"] .nav-chevron { transform: rotate(180deg); }
+.nav-submenu {
+  position: absolute; top: 100%; left: 0; width: 100%; min-width: 210px;
+  margin: 0; padding: 8px; list-style: none; background: #fff; color: var(--azul);
+  border: 1px solid var(--borde); border-top: 3px solid var(--azul); border-radius: 0 0 12px 12px;
+  box-shadow: 0 14px 28px rgb(16 51 92 / 16%);
+  opacity: 0; visibility: hidden; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.nav-trabajos.abierto .nav-submenu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+.enlaces .nav-submenu a { display: block; padding: 13px 16px; border: 0; border-radius: 6px; text-transform: none; font-size: 14px; letter-spacing: .2px; transition: background .18s, color .18s, padding .18s; }
+.enlaces .nav-submenu a:hover, .enlaces .nav-submenu a:focus-visible, .enlaces .nav-submenu a[aria-current="page"] { background: var(--azul-hover); color: #fff; padding-left: 21px; }
+.trabajo-detalle { min-height: 60vh; }
+.trabajo-ruta { color: var(--secundario); font-size: 13px; margin: 0 0 24px; }
+.trabajo-pendiente { display: flex; gap: 28px; align-items: center; padding: 48px 36px; background: #fff; border: 1px solid var(--borde); border-radius: 12px; }
+.trabajo-numero { color: var(--gris); font-size: 56px; font-weight: 700; line-height: 1; }
+.trabajo-pendiente h2 { color: var(--azul); font-weight: 700; }
+.trabajo-pendiente p { margin: 0; color: var(--secundario); }
+@media (max-width: 640px) {
+  .nav-trabajos { max-width: 100%; }
+  .nav-trabajos-boton { padding: 14px 12px; font-size: 11px; }
+  .nav-submenu { min-width: 0; width: 100%; }
+  .trabajo-pendiente { padding: 28px 22px; gap: 18px; align-items: flex-start; }
+  .trabajo-numero { font-size: 38px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-submenu, .nav-chevron, .enlaces .nav-submenu a { transition: none; }
+}
+
+/* Tildes pequeñas en la lista de clientes de Referencias */
+.respaldo-lista {
+  list-style: none;
+  padding-left: 0;
+}
+
+.respaldo-lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.respaldo-lista .respaldo-check {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 0;
+  font-size: 12px;
+  border-radius: 3px;
+}

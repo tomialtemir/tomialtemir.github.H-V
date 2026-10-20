@@ -93,7 +93,13 @@
   <div class="contenedor enlaces">
     <a href="index.html">Nosotros</a>
     <a href="servicios.html">Servicios</a>
-    <a href="trabajos.html">Trabajos Realizados</a>
+    <div class="nav-trabajos">
+      <button class="nav-trabajos-boton" type="button" aria-expanded="false" aria-controls="submenu-trabajos">Trabajos Realizados <span aria-hidden="true" class="nav-chevron">⌄</span></button>
+      <ul class="nav-submenu" id="submenu-trabajos" inert><li><a href="trabajo-1.html">Impermeabilizaciones en Altura</a></li>
+<li><a href="trabajo-2.html">Terraza</a></li>
+<li><a href="trabajo-3.html">Palieres</a></li>
+<li><a href="trabajo-4.html">Reforma Integrales Departamentos</a></li></ul>
+    </div>
     <a href="referencias.html" aria-current="page">Referencias</a>
     <a href="contacto.html">Contacto</a>
   </div>
@@ -206,11 +212,23 @@
               <h2>También trabajamos con</h2>
 
               <ul class="respaldo-lista">
-                <li>Particulares</li>
-                <li>Empresas</li>
-                <li>Arquitectos</li>
-                <li>Contratistas externos</li>
-              </ul>
+  <li>
+    <span class="respaldo-check" aria-hidden="true">✓</span>
+    Particulares
+  </li>
+  <li>
+    <span class="respaldo-check" aria-hidden="true">✓</span>
+    Empresas
+  </li>
+  <li>
+    <span class="respaldo-check" aria-hidden="true">✓</span>
+    Arquitectos
+  </li>
+  <li>
+    <span class="respaldo-check" aria-hidden="true">✓</span>
+    Contratistas externos
+  </li>
+</ul>
             </aside>
           </div>
         </div>
