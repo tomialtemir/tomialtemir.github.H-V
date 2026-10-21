@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Trabajo 4 de HV Obras &amp; Servicios."
+      content="Reformas integrales de departamentos: antes y después de nuestros trabajos. HV Obras &amp; Servicios."
     />
-    <title>Trabajo 4 | HV Obras &amp; Servicios</title>
+    <title>Reformas integrales de departamentos | HV Obras &amp; Servicios</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -106,19 +106,23 @@
 </nav>
 
     <main id="inicio" tabindex="-1">
-      <section class="obras trabajo-detalle" aria-labelledby="titulo-trabajo">
+      <section class="altura" aria-labelledby="titulo-trabajo">
         <div class="contenedor">
-          <p class="trabajo-ruta">Trabajos realizados / Trabajo 4</p>
-          <header class="obras-cabecera">
-            <h1 class="obras-titulo" id="titulo-trabajo">Trabajo 4</h1>
-            <p class="obras-intro">Conocé los detalles de este proyecto de HV Obras &amp; Servicios.</p>
+          <header class="altura-apertura">
+            <div><p class="altura-etiqueta">HV OBRAS &amp; SERVICIOS / TRABAJOS REALIZADOS</p>
+              <h1 id="titulo-trabajo">Reformas integrales<br>de departamentos</h1>
+            </div>
+            <p class="altura-intro">Cada obra, una transformación.<br>Conocé el antes y el después de nuestras reformas.</p>
           </header>
-          <!-- Agregar aquí las fotografías y la descripción de este trabajo. -->
-          <div class="trabajo-pendiente">
-            <span class="trabajo-numero" aria-hidden="true">04</span>
-            <div><h2>Próximamente</h2><p>Estamos preparando las imágenes y los detalles de este trabajo.</p></div>
-          </div>
-          <div class="obras-cierre"><p>¿Tenés un proyecto en mente?</p><a class="obras-contacto" href="contacto.html">Consultanos tu proyecto <span aria-hidden="true">→</span></a></div>
+          <article class="altura-obra" aria-labelledby="departamento-01">
+            <header class="altura-obra-cabecera"><div class="altura-ubicacion">
+              <!-- DIRECCIÓN DE ESTA OBRA: reemplazá solamente el texto del h2. -->
+              <h2 id="departamento-01">Dirección de la obra</h2>
+            </div></header>
+            <div class="depto-comparacion"><figure class="altura-foto "><figcaption><span class="altura-estado">Antes</span><span>Estado previo</span></figcaption><div class="depto-fotos depto-fotos-antes"><a class="altura-ampliar" href="imagenes/antes-depto-1.JPG" aria-label="Ampliar foto 1 del antes de la cocina"><img src="imagenes/antes-depto-1.JPG" alt="Cocina antes de la reforma, con revestimientos, mesada y artefactos originales." width="768" height="1024" loading="lazy"><span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a><a class="altura-ampliar" href="imagenes/antes-depto-3.JPG" aria-label="Ampliar foto 2 del antes de la cocina"><img src="imagenes/antes-depto-3.JPG" alt="Otra vista de la cocina antes de renovar sus revestimientos y mobiliario." width="698" height="931" loading="lazy"><span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div></figure><figure class="altura-foto altura-foto-despues"><figcaption><span class="altura-estado">Después</span><span>Trabajo terminado</span></figcaption><div class="depto-fotos depto-fotos-despues"><a class="altura-ampliar" href="imagenes/despues-depto-1.JPG" aria-label="Ampliar foto 1 del después de la cocina"><img src="imagenes/despues-depto-1.JPG" alt="Cocina renovada con mesada, horno y campana extractora." width="768" height="1024" loading="lazy"><span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a><a class="altura-ampliar" href="imagenes/despues-depto-2.JPG" aria-label="Ampliar foto 2 del después de la cocina"><img src="imagenes/despues-depto-2.JPG" alt="Vista general de la cocina renovada, con revestimientos claros y nuevo piso." width="768" height="1024" loading="lazy"><span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div></figure></div>
+          </article>
+          <!-- AGREGAR LA SEGUNDA OBRA AQUÍ: antes del bloque de consulta y de ubicación/contacto. -->
+          <div class="altura-cierre"><div><p class="altura-etiqueta">HABLEMOS DE TU PROYECTO</p><h2>¿Querés renovar tu departamento?</h2></div><a class="obras-contacto" href="contacto.html">Consultanos tu proyecto <span aria-hidden="true">→</span></a></div>
         </div>
       </section>
       <section class="informacion contenedor" aria-label="Ubicación y contacto">
@@ -158,5 +162,9 @@
     height="26"
   >
 </a>
+<dialog class="altura-visor" aria-label="Fotografía ampliada">
+      <button class="altura-visor-cerrar" type="button" aria-label="Cerrar imagen">Cerrar ×</button>
+      <img alt="">
+    </dialog>
   </body>
 </html>

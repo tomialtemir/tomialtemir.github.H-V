@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Trabajo 2 de HV Obras &amp; Servicios."
+      content="Proceso y resultado de nuestros trabajos de impermeabilización de terrazas."
     />
-    <title>Trabajo 2 | HV Obras &amp; Servicios</title>
+    <title>Terrazas | HV Obras &amp; Servicios</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -106,19 +106,37 @@
 </nav>
 
     <main id="inicio" tabindex="-1">
-      <section class="obras trabajo-detalle" aria-labelledby="titulo-trabajo">
+      <section class="altura terraza-pagina" aria-labelledby="titulo-trabajo">
         <div class="contenedor">
-          <p class="trabajo-ruta">Trabajos realizados / Trabajo 2</p>
-          <header class="obras-cabecera">
-            <h1 class="obras-titulo" id="titulo-trabajo">Trabajo 2</h1>
-            <p class="obras-intro">Conocé los detalles de este proyecto de HV Obras &amp; Servicios.</p>
+          <header class="altura-apertura">
+            <div><p class="altura-etiqueta">HV OBRAS &amp; SERVICIOS / TRABAJOS REALIZADOS</p>
+              <h1 id="titulo-trabajo">Impermeabilización<br>de terrazas</h1>
+            </div>
+            <p class="altura-intro">Cada obra, una transformación.<br>Conocé el proceso y el resultado final de nuestros trabajos en terrazas.</p>
           </header>
-          <!-- Agregar aquí las fotografías y la descripción de este trabajo. -->
-          <div class="trabajo-pendiente">
-            <span class="trabajo-numero" aria-hidden="true">02</span>
-            <div><h2>Próximamente</h2><p>Estamos preparando las imágenes y los detalles de este trabajo.</p></div>
-          </div>
-          <div class="obras-cierre"><p>¿Tenés un proyecto en mente?</p><a class="obras-contacto" href="contacto.html">Consultanos tu proyecto <span aria-hidden="true">→</span></a></div>
+          <!-- INICIO OBRA TERRAZA 01 -->
+          <article class="altura-obra" aria-labelledby="terraza-01">
+            <header class="altura-obra-cabecera">
+              <div class="altura-ubicacion">
+                
+                <h2 id="terraza-01">Jujuy 110</h2>
+              </div>
+            </header>
+            <div class="terraza-comparacion">
+              <figure class="altura-foto">
+                <figcaption><span class="altura-estado">Antes</span><span>Proceso de obra</span></figcaption>
+                <div class="terraza-antes"><a class="altura-ampliar" href="imagenes/antes-terraza-1.jpg" aria-label="Ampliar: Terraza con la superficie en preparación antes de la terminación"><img src="imagenes/antes-terraza-1.jpg" alt="Terraza con la superficie en preparación antes de la terminación" width="1600" height="1200" loading="lazy"><span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a class="altura-ampliar" href="imagenes/antes-terraza-2.jpg" aria-label="Ampliar: Colocación de membrana en la terraza durante los trabajos"><img src="imagenes/antes-terraza-2.jpg" alt="Colocación de membrana en la terraza durante los trabajos" width="1600" height="1200" loading="lazy"><span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div>
+              </figure>
+              <figure class="altura-foto altura-foto-despues">
+                <figcaption><span class="altura-estado">Después</span><span>Trabajo terminado</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/despues-terraza.jpg" aria-label="Ampliar: Terraza terminada con revestimiento rojizo y paredes renovadas"><img src="imagenes/despues-terraza.jpg" alt="Terraza terminada con revestimiento rojizo y paredes renovadas" width="1600" height="1200" loading="lazy"><span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              </figure>
+            </div>
+          </article>
+          <!-- FIN OBRA TERRAZA 01 -->
+          <!-- AGREGAR LAS PRÓXIMAS OBRAS AQUÍ, ANTES DEL CIERRE. -->
+          <div class="altura-cierre"><div><p class="altura-etiqueta">HABLEMOS DE TU EDIFICIO</p><h2>¿Tu terraza necesita una renovación?</h2></div><a class="obras-contacto" href="contacto.html">Consultanos tu proyecto <span aria-hidden="true">→</span></a></div>
         </div>
       </section>
       <section class="informacion contenedor" aria-label="Ubicación y contacto">
@@ -158,5 +176,9 @@
     height="26"
   >
 </a>
+    <dialog class="altura-visor" aria-label="Fotografía ampliada">
+      <button class="altura-visor-cerrar" type="button" aria-label="Cerrar imagen">Cerrar ×</button>
+      <img alt="">
+    </dialog>
   </body>
 </html>

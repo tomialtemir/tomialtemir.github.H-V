@@ -1417,7 +1417,7 @@ footer span {
 .altura-foto-despues figcaption { background: var(--azul); }
 .altura-estado { text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
 .altura-ampliar { display: block; position: relative; height: auto; padding: 0; cursor: zoom-in; text-decoration: none; }
-.altura-ampliar img { display: block; width: 100%; height: auto; }
+.altura-ampliar img { display: block; width: 100%; height: 700px; }
 .altura-ampliar:focus-visible { outline-offset: -5px; }
 .altura-zoom { position: absolute; right: 24px; bottom: 24px; display: grid; place-items: center; width: 36px; height: 36px; background: #fff; border-radius: 50%; color: var(--azul); box-shadow: 0 3px 12px #0002; font-size: 23px; transition: transform .2s ease; }
 .altura-ampliar:hover .altura-zoom { transform: translateY(-3px); }
@@ -1452,3 +1452,32 @@ footer span {
   .altura-cierre .obras-contacto { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { .altura-zoom { transition: none; } }
+
+/* 16. Terrazas: dos vistas del proceso y una del resultado, sin recortes. */
+.terraza-comparacion { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,2fr); gap: 2px; background: #fff; }
+.terraza-antes { display: grid; gap: 0; }
+.terraza-comparacion .altura-ampliar { display: block; height: auto; padding: 0; }
+.terraza-comparacion .altura-ampliar img { display: block; width: 100%; height: auto; }
+.terraza-comparacion figcaption { min-height: 46px; }
+@media (max-width: 800px) {
+  .terraza-comparacion { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .terraza-antes { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2px; }
+  .terraza-comparacion .altura-zoom { right: 12px; bottom: 12px; }
+}
+@media (max-width: 480px) {
+  .terraza-antes { grid-template-columns: minmax(0,1fr); }
+}
+
+/* 17. Reformas de departamentos: antes y después, sin recortar las fotos. */
+.depto-comparacion { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2px; background: #fff; align-items: start; }
+.depto-fotos { display: grid; gap: 2px; align-items: start; background: #fff; }
+.depto-fotos-antes { grid-template-columns: 1fr; }
+.depto-fotos-despues { grid-template-columns: 1fr; }
+.depto-fotos .altura-ampliar { min-width: 0; }
+.depto-fotos .altura-zoom { right: 10px; bottom: 10px; }
+@media (max-width: 600px) {
+  .depto-comparacion { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 600px) {
+  .depto-fotos-antes, .depto-fotos-despues { grid-template-columns: 1fr; }
+}

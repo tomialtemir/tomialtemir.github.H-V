@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Trabajo 3 de HV Obras &amp; Servicios."
+      content="Antes y después de nuestros trabajos de renovación de palieres y escaleras."
     />
-    <title>Trabajo 3 | HV Obras &amp; Servicios</title>
+    <title>Palieres y escaleras | HV Obras &amp; Servicios</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -106,19 +106,71 @@
 </nav>
 
     <main id="inicio" tabindex="-1">
-      <section class="obras trabajo-detalle" aria-labelledby="titulo-trabajo">
+      <section class="altura" aria-labelledby="titulo-trabajo">
         <div class="contenedor">
-          <p class="trabajo-ruta">Trabajos realizados / Trabajo 3</p>
-          <header class="obras-cabecera">
-            <h1 class="obras-titulo" id="titulo-trabajo">Trabajo 3</h1>
-            <p class="obras-intro">Conocé los detalles de este proyecto de HV Obras &amp; Servicios.</p>
+          <header class="altura-apertura">
+            <div><p class="altura-etiqueta">HV OBRAS &amp; SERVICIOS / TRABAJOS REALIZADOS</p>
+              <h1 id="titulo-trabajo">Renovación de<br>palieres y escaleras</h1>
+            </div>
+            <p class="altura-intro">Cada obra, una transformación.<br>Conocé el antes y el después de nuestros trabajos en espacios comunes.</p>
           </header>
-          <!-- Agregar aquí las fotografías y la descripción de este trabajo. -->
-          <div class="trabajo-pendiente">
-            <span class="trabajo-numero" aria-hidden="true">03</span>
-            <div><h2>Próximamente</h2><p>Estamos preparando las imágenes y los detalles de este trabajo.</p></div>
-          </div>
-          <div class="obras-cierre"><p>¿Tenés un proyecto en mente?</p><a class="obras-contacto" href="contacto.html">Consultanos tu proyecto <span aria-hidden="true">→</span></a></div>
+          <article class="altura-obra" aria-labelledby="palier-01">
+            <header class="altura-obra-cabecera">
+              
+              <div class="altura-ubicacion">
+                
+                <h2 id="palier-01">INTA</h2>
+              </div>
+             
+            </header>
+            <!-- Antes vertical y después horizontal: fotografías completas a igual altura. -->
+            <div class="altura-comparacion" style="--columnas-fotos: 9fr 16fr;">
+              <figure class="altura-foto">
+                <figcaption><span class="altura-estado">Antes</span><span>Estado previo</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/antes-inta.jpg" aria-label="Ampliar foto del antes de la obra 01">
+                  <img src="imagenes/antes-inta.jpg" alt="Escalera de INTA con paredes en preparación antes de la terminación." width="780" height="1040" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span>
+                </a>
+              </figure>
+              <figure class="altura-foto altura-foto-despues">
+                <figcaption><span class="altura-estado">Después</span><span>Trabajo terminado</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/despues-inta.jpg" aria-label="Ampliar foto del después de la obra 01">
+                  <img src="imagenes/despues-inta.jpg" alt="Escalera de INTA después de la renovación, con paredes y techo terminados." width="1600" height="1200" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span>
+                </a>
+              </figure>
+            </div>
+            
+          </article>
+          <article class="altura-obra" aria-labelledby="palier-02">
+            <header class="altura-obra-cabecera">
+              
+              <div class="altura-ubicacion">
+                
+                <h2 id="palier-02">Billinghurst 1333</h2>
+              </div>
+             
+            </header>
+            <!-- Fotografías completas a igual altura, sin recortes. -->
+            <div class="altura-comparacion" style="--columnas-fotos: 1453fr 1104fr;">
+              <figure class="altura-foto">
+                <figcaption><span class="altura-estado">Antes</span><span>Estado previo</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/antes-bili.jpeg" aria-label="Ampliar foto del antes de la obra en Billinghurst 1333">
+                  <img src="imagenes/antes-bili.jpeg" alt="Pared del palier de Billinghurst 1333 con deterioro antes de la renovación." width="1536" height="2048" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span>
+                </a>
+              </figure>
+              <figure class="altura-foto altura-foto-despues">
+                <figcaption><span class="altura-estado">Después</span><span>Trabajo terminado</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/despues-bili.jpg" aria-label="Ampliar foto del después de la obra en Billinghurst 1333">
+                  <img src="imagenes/despues-bili.jpg" alt="Palier de Billinghurst 1333 después de la renovación, con paredes y techo terminados." width="828" height="1453" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span>
+                </a>
+              </figure>
+            </div>
+            
+          </article>
+          <div class="altura-cierre"><div><p class="altura-etiqueta">HABLEMOS DE TU EDIFICIO</p><h2>¿Tus espacios comunes necesitan una renovación?</h2></div><a class="obras-contacto" href="contacto.html">Consultanos tu proyecto <span aria-hidden="true">→</span></a></div>
         </div>
       </section>
       <section class="informacion contenedor" aria-label="Ubicación y contacto">
@@ -158,5 +210,9 @@
     height="26"
   >
 </a>
+<dialog class="altura-visor" aria-label="Fotografía ampliada">
+      <button class="altura-visor-cerrar" type="button" aria-label="Cerrar imagen">Cerrar ×</button>
+      <img alt="">
+    </dialog>
   </body>
 </html>
