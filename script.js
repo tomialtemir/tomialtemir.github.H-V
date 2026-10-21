@@ -186,3 +186,28 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciarSubmenu);
   else iniciarSubmenu();
 })();
+
+// GALERÍA DE OBRAS: ampliación de las fotos de antes y después.
+(() => {
+  const visor = document.querySelector('.altura-visor');
+  if (!visor || typeof visor.showModal !== 'function') return;
+  const imagen = visor.querySelector('img');
+  let anteriorOverflow = '';
+  document.querySelectorAll('.altura-ampliar').forEach(enlace => {
+    enlace.addEventListener('click', evento => {
+      if (evento.ctrlKey || evento.metaKey || evento.shiftKey || evento.altKey) return;
+      evento.preventDefault();
+      imagen.src = enlace.href;
+      imagen.alt = enlace.querySelector('img').alt;
+      anteriorOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      visor.showModal();
+    });
+  });
+  visor.querySelector('button').addEventListener('click', () => visor.close());
+  visor.addEventListener('click', evento => {
+    const r = visor.getBoundingClientRect();
+    if (evento.clientX < r.left || evento.clientX > r.right || evento.clientY < r.top || evento.clientY > r.bottom) visor.close();
+  });
+  visor.addEventListener('close', () => { document.body.style.overflow = anteriorOverflow; });
+})();

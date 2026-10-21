@@ -1397,3 +1397,58 @@ footer span {
   font-size: 12px;
   border-radius: 3px;
 }
+/* 15. Impermeabilizaciones: galería de obras antes y después */
+.altura { background: #f4f5f6; padding: 56px 0 0; }
+.altura-apertura { display: grid; grid-template-columns: 1.4fr 1fr; align-items: end; gap: 50px; padding-bottom: 38px; }
+.altura-etiqueta { margin: 0 0 14px; color: var(--gris); font-size: 10px; font-weight: 700; letter-spacing: 1.8px; line-height: 1.6; }
+.altura-apertura h1 { margin: 0; color: var(--azul); font-size: clamp(32px, 3.6vw, 49px); line-height: 1.1; letter-spacing: -1.5px; }
+.altura-intro { margin: 0; max-width: 400px; color: var(--secundario); font-size: 16px; line-height: 1.8; border-left: 2px solid var(--azul); padding-left: 24px; }
+.altura-obra { background: #fff; border: 1px solid var(--borde); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgb(16 51 92 / 4%); }
+.altura-obra + .altura-obra { margin-top: 36px; }
+.altura-obra-cabecera { display: flex; align-items: center; justify-content: center; padding: 24px 30px; text-align: center; }
+.altura-numero { color: var(--gris); font-weight: 700; font-size: 36px; line-height: 1; border-right: 1px solid var(--borde); padding-right: 20px; }
+.altura-ubicacion { min-width: 0; flex: 1; }
+.altura-ubicacion .altura-etiqueta { margin-bottom: 5px; }
+.altura-ubicacion h2 { margin: 0; font-family: 'Times New Roman', Times, serif; font-size: clamp(25px, 2.6vw, 34px); line-height: 1.3; font-weight: 400; letter-spacing: .4px; text-align: center; color: var(--azul); overflow-wrap: anywhere; }
+.altura-categoria { border: 1px solid var(--borde); border-radius: 30px; padding: 7px 12px; font-size: 11px; color: var(--azul); }
+.altura-comparacion { display: grid; grid-template-columns: var(--columnas-fotos, 1fr 1fr); gap: 2px; background: #fff; }
+.altura-foto { margin: 0; min-width: 0; background: #e9ecef; }
+.altura-foto figcaption { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 13px 22px; background: var(--gris); color: #fff; font-size: 12px; }
+.altura-foto-despues figcaption { background: var(--azul); }
+.altura-estado { text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+.altura-ampliar { display: block; position: relative; height: auto; padding: 0; cursor: zoom-in; text-decoration: none; }
+.altura-ampliar img { display: block; width: 100%; height: auto; }
+.altura-ampliar:focus-visible { outline-offset: -5px; }
+.altura-zoom { position: absolute; right: 24px; bottom: 24px; display: grid; place-items: center; width: 36px; height: 36px; background: #fff; border-radius: 50%; color: var(--azul); box-shadow: 0 3px 12px #0002; font-size: 23px; transition: transform .2s ease; }
+.altura-ampliar:hover .altura-zoom { transform: translateY(-3px); }
+.altura-nota { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 30px; }
+.altura-nota > span { color: var(--azul); font-weight: 700; font-size: 14px; }
+.altura-nota p { margin: 0; color: var(--secundario); font-size: 12px; }
+.altura-cierre { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 42px 0; }
+.altura-cierre .altura-etiqueta { margin-bottom: 8px; }
+.altura-cierre h2 { margin: 0; font-size: 22px; color: var(--azul); font-weight: 700; }
+.altura-cierre .obras-contacto { flex-shrink: 0; }
+.altura-visor { max-width: 96vw; max-height: 96vh; padding: 52px 12px 12px; border: 0; border-radius: 8px; background: #17212d; }
+.altura-visor::backdrop { background: rgb(9 17 28 / 88%); }
+.altura-visor img { max-width: 90vw; max-height: 80vh; width: auto; height: auto; object-fit: contain; }
+.altura-visor-cerrar { position: absolute; right: 12px; top: 10px; padding: 8px 12px; border: 1px solid #ffffff70; border-radius: 5px; background: transparent; color: #fff; font: inherit; font-size: 14px; cursor: pointer; }
+@media (max-width: 800px) {
+  .altura-apertura { grid-template-columns: 1fr; gap: 24px; }
+  .altura-intro { max-width: 580px; }
+  .altura-categoria { display: none; }
+  .altura-cierre { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .altura { padding-top: 32px; }
+  .altura-apertura { padding-bottom: 28px; }
+  .altura-obra-cabecera { padding: 22px 18px; gap: 14px; }
+  .altura-numero { font-size: 28px; padding-right: 14px; }
+  .altura-ubicacion h2 { font-size: 26px; }
+  .altura-comparacion { grid-template-columns: 1fr; gap: 16px; }
+  .altura-ampliar { height: auto; padding: 0; }
+  .altura-ampliar img { height: auto; }
+  .altura-nota { align-items: flex-start; flex-direction: column; gap: 6px; padding: 18px; }
+  .altura-cierre { gap: 22px; padding: 32px 0; }
+  .altura-cierre .obras-contacto { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .altura-zoom { transition: none; } }

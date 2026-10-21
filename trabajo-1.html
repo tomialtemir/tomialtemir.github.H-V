@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Trabajo 1 de HV Obras &amp; Servicios."
+      content="Antes y después de nuestras obras de impermeabilización en altura. HV Obras &amp; Servicios."
     />
-    <title>Trabajo 1 | HV Obras &amp; Servicios</title>
+    <title>Impermeabilizaciones en altura | HV Obras &amp; Servicios</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -95,7 +95,7 @@
     <a href="servicios.html">Servicios</a>
     <div class="nav-trabajos nav-trabajos-activo">
       <button class="nav-trabajos-boton" type="button" aria-expanded="false" aria-controls="submenu-trabajos">Trabajos Realizados <span aria-hidden="true" class="nav-chevron">⌄</span></button>
-      <ul class="nav-submenu" id="submenu-trabajos" inert><li><a href="trabajo-1.html">Impermeabilizaciones en Altura</a></li>
+      <ul class="nav-submenu" id="submenu-trabajos" inert><li><a href="trabajo-1.html" aria-current="page">Impermeabilizaciones en Altura</a></li>
 <li><a href="trabajo-2.html">Terraza</a></li>
 <li><a href="trabajo-3.html">Palieres</a></li>
 <li><a href="trabajo-4.html">Reforma Integrales Departamentos</a></li></ul>
@@ -106,19 +106,115 @@
 </nav>
 
     <main id="inicio" tabindex="-1">
-      <section class="obras trabajo-detalle" aria-labelledby="titulo-trabajo">
+      <section class="altura" aria-labelledby="titulo-trabajo">
         <div class="contenedor">
-          <p class="trabajo-ruta">Trabajos realizados / Trabajo 1</p>
-          <header class="obras-cabecera">
-            <h1 class="obras-titulo" id="titulo-trabajo">Trabajo 1</h1>
-            <p class="obras-intro">Conocé los detalles de este proyecto de HV Obras &amp; Servicios.</p>
+          <header class="altura-apertura">
+            <div><p class="altura-etiqueta">HV OBRAS &amp; SERVICIOS / TRABAJOS REALIZADOS</p>
+              <h1 id="titulo-trabajo">Impermeabilizaciones<br>en altura</h1>
+            </div>
+            <p class="altura-intro">Cada obra, una transformación.<br>Conocé el antes y el después de nuestros trabajos en fachadas y espacios exteriores.</p>
           </header>
-          <!-- Agregar aquí las fotografías y la descripción de este trabajo. -->
-          <div class="trabajo-pendiente">
-            <span class="trabajo-numero" aria-hidden="true">01</span>
-            <div><h2>Próximamente</h2><p>Estamos preparando las imágenes y los detalles de este trabajo.</p></div>
-          </div>
-          <div class="obras-cierre"><p>¿Tenés un proyecto en mente?</p><a class="obras-contacto" href="contacto.html">Consultanos tu proyecto <span aria-hidden="true">→</span></a></div>
+          <!-- INICIO OBRA 01: duplicar este article para agregar otra obra. -->
+          <article class="altura-obra" aria-labelledby="obra-01">
+            <header class="altura-obra-cabecera">
+              
+              <div class="altura-ubicacion">
+                
+                <h2 id="obra-01">Córdoba 4441</h2>
+              </div>
+             
+            </header>
+            <!-- Estas proporciones corresponden a las fotos: antes horizontal 4:3 y después vertical 3:4. -->
+            <div class="altura-comparacion" style="--columnas-fotos: 16fr 9fr;">
+              <figure class="altura-foto">
+                <figcaption><span class="altura-estado">Antes</span><span>Estado previo</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/antes-cordoba.jpg" aria-label="Ampliar foto del antes de la obra 01">
+                  <img src="imagenes/antes-cordoba.jpg" alt="Fachada y balcón antes de la intervención, con desgaste visible del revestimiento." width="1600" height="1200" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true">↗</span>
+                </a>
+              </figure>
+              <figure class="altura-foto altura-foto-despues">
+                <figcaption><span class="altura-estado">Después</span><span>Trabajo terminado</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/despues-cordoba.jpg" aria-label="Ampliar foto del después de la obra 01">
+                  <img src="imagenes/despues-cordoba.jpg" alt="Fachada y balcones después de la intervención, con terminación renovada en tonos claros." width="1200" height="1600" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true">↗</span>
+                </a>
+              </figure>
+            </div>
+            
+          </article>
+          <!-- FIN OBRA 01 -->
+          <!-- INICIO OBRA 02 -->
+          <article class="altura-obra" aria-labelledby="obra-02">
+            <header class="altura-obra-cabecera">
+              <div class="altura-ubicacion"><h2 id="obra-02">Av. de mayo 981</h2></div>
+            </header>
+            <div class="altura-comparacion" style="--columnas-fotos: 371fr 400fr;">
+              <figure class="altura-foto">
+                <figcaption><span class="altura-estado">Antes</span><span>Estado previo</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/antes-mayo.jpg" aria-label="Ampliar foto: antes de Av. de mayo 981">
+                  <img src="imagenes/antes-mayo.jpg" alt="Av. de mayo 981: fachada antes de la intervención." width="1600" height="1200" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true">↗</span>
+                </a>
+              </figure>
+              <figure class="altura-foto altura-foto-despues">
+                <figcaption><span class="altura-estado">Después</span><span>Trabajo terminado</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/despues-mayo.jpg" aria-label="Ampliar foto: después de Av. de mayo 981">
+                  <img src="imagenes/despues-mayo.jpg" alt="Av. de mayo 981: fachada después de la intervención." width="1600" height="1113" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true">↗</span>
+                </a>
+              </figure>
+            </div>
+          </article>
+          <!-- FIN OBRA 02 -->
+          <!-- INICIO OBRA 03 -->
+          <article class="altura-obra" aria-labelledby="obra-03">
+            <header class="altura-obra-cabecera">
+              <div class="altura-ubicacion"><h2 id="obra-03">Galería Acoyte</h2></div>
+            </header>
+            <div class="altura-comparacion" style="--columnas-fotos: 1fr 1fr;">
+              <figure class="altura-foto">
+                <figcaption><span class="altura-estado">Antes</span><span>Estado previo</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/antes-acoyte.jpg" aria-label="Ampliar foto: antes de Galería Acoyte">
+                  <img src="imagenes/antes-acoyte.jpg" alt="Galería Acoyte: fachada antes de la intervención." width="1600" height="1200" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true">↗</span>
+                </a>
+              </figure>
+              <figure class="altura-foto altura-foto-despues">
+                <figcaption><span class="altura-estado">Después</span><span>Trabajo terminado</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/despues-acoyte.jpg" aria-label="Ampliar foto: después de Galería Acoyte">
+                  <img src="imagenes/despues-acoyte.jpg" alt="Galería Acoyte: fachada después de la intervención." width="1600" height="1200" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true">↗</span>
+                </a>
+              </figure>
+            </div>
+          </article>
+          <!-- FIN OBRA 03 -->
+          <!-- INICIO OBRA 04 -->
+          <article class="altura-obra" aria-labelledby="obra-04">
+            <header class="altura-obra-cabecera">
+              <div class="altura-ubicacion"><h2 id="obra-04">Lezica 4265</h2></div>
+            </header>
+            <div class="altura-comparacion" style="--columnas-fotos: 1fr 1fr;">
+              <figure class="altura-foto">
+                <figcaption><span class="altura-estado">Antes</span><span>Estado previo</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/antes-lezica.jpg" aria-label="Ampliar foto: antes de Lezica 4265">
+                  <img src="imagenes/antes-lezica.jpg" alt="Lezica 4265: fachada con andamios durante los trabajos." width="960" height="1280" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true">↗</span>
+                </a>
+              </figure>
+              <figure class="altura-foto altura-foto-despues">
+                <figcaption><span class="altura-estado">Después</span><span>Trabajo terminado</span></figcaption>
+                <a class="altura-ampliar" href="imagenes/despues-lezica.jpg" aria-label="Ampliar foto: después de Lezica 4265">
+                  <img src="imagenes/despues-lezica.jpg" alt="Lezica 4265: fachada después de la intervención." width="960" height="1280" loading="lazy">
+                  <span class="altura-zoom" aria-hidden="true">↗</span>
+                </a>
+              </figure>
+            </div>
+          </article>
+          <!-- FIN OBRA 04 -->
+          <!-- AGREGAR LAS PRÓXIMAS OBRAS AQUÍ, ANTES DEL CIERRE. -->
+          <div class="altura-cierre"><div><p class="altura-etiqueta">HABLEMOS DE TU EDIFICIO</p><h2>¿Tu fachada necesita una renovación?</h2></div><a class="obras-contacto" href="contacto.html">Consultanos tu proyecto <span aria-hidden="true">→</span></a></div>
         </div>
       </section>
       <section class="informacion contenedor" aria-label="Ubicación y contacto">
@@ -158,5 +254,9 @@
     height="26"
   >
 </a>
+    <dialog class="altura-visor" aria-label="Fotografía ampliada">
+      <button class="altura-visor-cerrar" type="button" aria-label="Cerrar imagen">Cerrar ×</button>
+      <img alt="">
+    </dialog>
   </body>
 </html>
