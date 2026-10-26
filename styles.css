@@ -1875,3 +1875,13 @@ footer span {
     height: 320px;
   }
 }
+
+/* El Maestro 5: mismos tamaños y proporción 1:2 que Jujuy 110.
+   Las miniaturas usan 4:3; el visor abre las fotos originales completas. */
+.terraza-comparacion.maestro-comparacion .altura-ampliar img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
