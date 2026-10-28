@@ -185,8 +185,8 @@ address strong {
   background-color: var(--gris);
   background-image: linear-gradient(90deg, rgba(108, 113, 119, 0.15), rgba(108, 113, 119, 0.82)),
     url("./imagenes/principal.jpg");
-  background-size: auto 370%;
-  background-position: 50% 30%;
+  background-size: auto, 100% auto;
+  background-position: center, right 60.4%;
   background-repeat: no-repeat;
   color: #fff;
 }
@@ -1884,4 +1884,24 @@ footer span {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center;
+}
+
+@media (min-width: 1001px) {
+  .portada .presentacion {
+    transform: translateX(200px) translateY(25px);
+  }
+}
+
+.enlaces .nav-submenu a {
+  display: block;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.enlaces .nav-submenu a:hover,
+.enlaces .nav-submenu a:focus-visible,
+.enlaces .nav-submenu a[aria-current="page"] {
+  padding-left: 16px;
+  padding-right: 16px;
 }
